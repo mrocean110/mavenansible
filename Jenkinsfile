@@ -16,12 +16,12 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh '=mvn clean package'  
+                sh 'mvn clean package'  
             }
         }
         stage('Archive'){
         steps{
-        archiveArtifacts artifacts: 'target/*.war', fingerprint=true
+        archiveArtifacts artifacts: 'target/test2.war', fingerprint:true
         }
         }
 
